@@ -8,6 +8,9 @@ install: bundle install --without=documentation
 
 before_script: 
     - open -b com.apple.iphonesimulator
+
+script:
+    - xcodebuild -project ChangingLegacyCode.xcodeproj -scheme ChangingLegacyCode -sdk iphonesimulator build test
     
 after_success:
     - slather
