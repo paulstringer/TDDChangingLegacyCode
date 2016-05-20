@@ -6,8 +6,12 @@ xcode_scheme: ChangingLegacyCode
 
 before_install: rvm use $RVM_RUBY_VERSION
 
+install: bundle install --without=documentation --path ../travis_bundle_dir
+
 script: 
     - open -b com.apple.iphonesimulator
     - xcodebuild -project ChangingLegacyCode.xcodeproj -scheme ChangingLegacyCode -sdk iphonesimulator build test
+    
+after_success:
     - slather
     - bash <(curl -s https://codecov.io/bash) -f path/to/xml_report/cobertura.xml
