@@ -12,7 +12,6 @@
 		8C8B23BB1CEE118B008BAB68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8B23B91CEE118B008BAB68 /* Main.storyboard */; };
 		8C8B23BD1CEE118B008BAB68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C8B23BC1CEE118B008BAB68 /* Assets.xcassets */; };
 		8C8B23C01CEE118B008BAB68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8B23BE1CEE118B008BAB68 /* LaunchScreen.storyboard */; };
-		8C8B23CB1CEE118B008BAB68 /* ChangingLegacyCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B23CA1CEE118B008BAB68 /* ChangingLegacyCodeTests.swift */; };
 		8C8B23D61CEE1199008BAB68 /* InMemoryDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B23D51CEE1199008BAB68 /* InMemoryDirectory.swift */; };
 		8C8B23D81CEE11BA008BAB68 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B23D71CEE11BA008BAB68 /* Element.swift */; };
 /* End PBXBuildFile section */
@@ -36,7 +35,6 @@
 		8C8B23BF1CEE118B008BAB68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C8B23C11CEE118B008BAB68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C8B23C61CEE118B008BAB68 /* ChangingLegacyCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangingLegacyCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C8B23CA1CEE118B008BAB68 /* ChangingLegacyCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingLegacyCodeTests.swift; sourceTree = "<group>"; };
 		8C8B23CC1CEE118B008BAB68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C8B23D51CEE1199008BAB68 /* InMemoryDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryDirectory.swift; sourceTree = "<group>"; };
 		8C8B23D71CEE11BA008BAB68 /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
@@ -60,6 +58,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C18929E1CF099B900A0E160 /* App Gumph */ = {
+			isa = PBXGroup;
+			children = (
+				8C8B23B51CEE118B008BAB68 /* AppDelegate.swift */,
+				8C8B23B71CEE118B008BAB68 /* ViewController.swift */,
+				8C8B23B91CEE118B008BAB68 /* Main.storyboard */,
+				8C8B23BC1CEE118B008BAB68 /* Assets.xcassets */,
+				8C8B23BE1CEE118B008BAB68 /* LaunchScreen.storyboard */,
+				8C8B23C11CEE118B008BAB68 /* Info.plist */,
+			);
+			name = "App Gumph";
+			sourceTree = "<group>";
+		};
+		8C18929F1CF099BF00A0E160 /* In Memory Directory */ = {
+			isa = PBXGroup;
+			children = (
+				8C8B23D51CEE1199008BAB68 /* InMemoryDirectory.swift */,
+				8C8B23D71CEE11BA008BAB68 /* Element.swift */,
+			);
+			name = "In Memory Directory";
+			sourceTree = "<group>";
+		};
 		8C8B23A91CEE118B008BAB68 = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +101,8 @@
 		8C8B23B41CEE118B008BAB68 /* ChangingLegacyCode */ = {
 			isa = PBXGroup;
 			children = (
-				8C8B23B51CEE118B008BAB68 /* AppDelegate.swift */,
-				8C8B23B71CEE118B008BAB68 /* ViewController.swift */,
-				8C8B23B91CEE118B008BAB68 /* Main.storyboard */,
-				8C8B23BC1CEE118B008BAB68 /* Assets.xcassets */,
-				8C8B23BE1CEE118B008BAB68 /* LaunchScreen.storyboard */,
-				8C8B23C11CEE118B008BAB68 /* Info.plist */,
-				8C8B23D51CEE1199008BAB68 /* InMemoryDirectory.swift */,
-				8C8B23D71CEE11BA008BAB68 /* Element.swift */,
+				8C18929E1CF099B900A0E160 /* App Gumph */,
+				8C18929F1CF099BF00A0E160 /* In Memory Directory */,
 			);
 			path = ChangingLegacyCode;
 			sourceTree = "<group>";
@@ -96,7 +110,6 @@
 		8C8B23C91CEE118B008BAB68 /* ChangingLegacyCodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				8C8B23CA1CEE118B008BAB68 /* ChangingLegacyCodeTests.swift */,
 				8C8B23CC1CEE118B008BAB68 /* Info.plist */,
 			);
 			path = ChangingLegacyCodeTests;
@@ -214,7 +227,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C8B23CB1CEE118B008BAB68 /* ChangingLegacyCodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
