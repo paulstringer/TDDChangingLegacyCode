@@ -6,3 +6,7 @@ before_script:
 
 script:
     - xcodebuild -project ChangingLegacyCode.xcodeproj -scheme ChangingLegacyCode -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build test
+    
+after_success:
+    - slather
+    - bash <(curl -s https://codecov.io/bash) -f cobertura.xml

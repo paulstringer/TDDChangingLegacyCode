@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C175F8E1CF4AC6200CD18C4 /* InMemoryDirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C175F8D1CF4AC6200CD18C4 /* InMemoryDirectoryTests.swift */; };
 		8C8B23B61CEE118B008BAB68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B23B51CEE118B008BAB68 /* AppDelegate.swift */; };
 		8C8B23B81CEE118B008BAB68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B23B71CEE118B008BAB68 /* ViewController.swift */; };
 		8C8B23BB1CEE118B008BAB68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C8B23B91CEE118B008BAB68 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C175F8D1CF4AC6200CD18C4 /* InMemoryDirectoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryDirectoryTests.swift; sourceTree = "<group>"; };
 		8C8B23B21CEE118B008BAB68 /* ChangingLegacyCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangingLegacyCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8B23B51CEE118B008BAB68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C8B23B71CEE118B008BAB68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		8C8B23C91CEE118B008BAB68 /* ChangingLegacyCodeTests */ = {
 			isa = PBXGroup;
 			children = (
+				8C175F8D1CF4AC6200CD18C4 /* InMemoryDirectoryTests.swift */,
 				8C8B23CC1CEE118B008BAB68 /* Info.plist */,
 			);
 			path = ChangingLegacyCodeTests;
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C175F8E1CF4AC6200CD18C4 /* InMemoryDirectoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,10 +373,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ChangingLegacyCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.stringerstheory.ChangingLegacyCodeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChangingLegacyCode.app/ChangingLegacyCode";
 			};
 			name = Debug;
@@ -381,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ChangingLegacyCodeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.stringerstheory.ChangingLegacyCodeTests;
