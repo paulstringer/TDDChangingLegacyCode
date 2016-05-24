@@ -53,7 +53,7 @@ class InMemoryDirectory {
         
     }
     
-    func generateIndex(adding: Bool = false) {
+    func generateIndex() {
         
         removeIndex()
         
