@@ -10,14 +10,25 @@ import Foundation
 
 class InMemoryDirectory {
   
+    private var indexOfIndexElement : Int?
     private var elements = [Element]()
-    
+
     //TODO: Modify to allow people to add elements at any time. The Index should be maintained auto-magically
     
     func addElement(element: Element) {
         
         elements.append(element)
         
+        if indexExists {
+            generateIndex()
+        }
+        
+    }
+    
+    private var indexExists: Bool {
+        get {
+            return indexOfIndexElement != nil
+        }
     }
     
     var elementCount: Int {
@@ -38,14 +49,38 @@ class InMemoryDirectory {
             
         }
         
-        
         return elements[index]
         
     }
     
-    //TODO: Write a test for the defect where GenerateIndex duplicates indexes
+    func generateIndex(adding: Bool = false) {
+        
+        removeIndex()
+        
+        appendIndex()
+    }
     
-    func generateIndex() {
+    func removeIndex() {
+        
+        if let indexToRemove = indexOfIndexElement  {
+            
+            elements.removeAtIndex(indexToRemove)
+            
+            indexOfIndexElement = nil
+            
+        }
+        
+    }
+    
+    func appendIndex() {
+        
+        elements.append(index())
+        
+        indexOfIndexElement = elementCount - 1
+        
+    }
+
+    func index() -> Element {
         
         var index = Element(name: "Index")
         
@@ -53,7 +88,7 @@ class InMemoryDirectory {
             index.addText(element.name + "\n")
         }
         
-        addElement(index)
+        return index
         
     }
     
