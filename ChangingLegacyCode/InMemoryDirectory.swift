@@ -10,11 +10,11 @@ import Foundation
 
 class InMemoryDirectory {
   
-    private var elements = [Element]()
+    fileprivate var elements = [Element]()
     
     //TODO: Modify to allow people to add elements at any time. The Index should be maintained auto-magically
     
-    func addElement(element: Element) {
+    func addElement(_ element: Element) {
         
         elements.append(element)
         
@@ -26,9 +26,9 @@ class InMemoryDirectory {
         }
     }
     
-    func element(name: String) -> Element? {
+    func element(_ name: String) -> Element? {
         
-        guard let index = ( elements.indexOf { (element) -> Bool in
+        guard let index = ( elements.index { (element) -> Bool in
             
             return element.name == name
             

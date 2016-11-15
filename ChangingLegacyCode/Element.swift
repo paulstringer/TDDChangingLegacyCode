@@ -12,7 +12,7 @@ struct Element {
     
     var name: String
     
-    mutating func addText(text: String) {
+    mutating func addText(_ text: String) {
         
         name = name + text
         
